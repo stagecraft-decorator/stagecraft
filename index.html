@@ -1,11 +1,430 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>stagecraft-decorator</title>
-  </head>
-  <body>
-    <h1>This is the website for stagecraft-decorator</h1>
-  </body>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models" content="Training-free approach to improve pretrained VLA policy performance using VLM-based in-context reasoning">
+  <meta property="og:title" content="StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models"/>
+  <meta property="og:description" content="Training-free approach to improve pretrained VLA policy performance using VLM-based in-context reasoning"/>
+  <meta property="og:url" content="YOUR WEBSITE URL"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <!-- <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/> -->
+
+
+  <!-- <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG"> -->
+  <!-- <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG"> -->
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <!-- <meta name="twitter:image" content="static/images/your_twitter_banner_image.png"> -->
+  <!-- <meta name="twitter:card" content="summary_large_image"> -->
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Vision Language Action, VLA, VLM, robot manipulation, distractors, obstructions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro|Roboto+Mono"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Anonymous Submission -->
+              <span class="author-block">
+                Anonymous Submission
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Banner Image -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column is-full">
+            <img src="static/images/main_banner.jpg" alt="StageCraft Overview" width="100%" class="center-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Large scale pre-training on text and image data along with diverse robot demonstrations has helped Vision Language Action models (VLAs) to generalize to novel tasks, objects and scenes. However, these models are still susceptible to failure in the presence of execution-time impediments such as distractors and physical obstructions in the robot's workspace. Existing policy improvement methods finetune base VLAs to improve generalization, yet they still struggle in unseen distractor settings. To address this problem, we investigate whether internet-scale pretraining of large vision-language models (VLMs) can be leveraged to reason about these impediments and mitigate policy failures. To this end, we propose StageCraft, a training-free approach to improve pretrained VLA policy performance by manipulating the environment's initial state using VLM-based in-context reasoning. StageCraft takes policy rollout videos and success labels as input and leverages VLM's reasoning ability to infer which objects in the initial state need to be manipulated to avoid anticipated execution failures. StageCraft is an extensible plug-and-play module that does not introduce additional constraints on the underlying policy, and only requires a few policy rollouts to work. We evaluate performance of state-of-the-art VLA models with StageCraft and show an absolute 40% performance improvement across three real world task domains involving diverse distractors and obstructions. Our simulation experiments in RLBench empirically show that StageCraft tailors its extent of intervention based on the strength of the underlying policy and improves its performance with more in-context samples.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Main Video -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-full">
+            <h2 class="title is-3">Main Video</h2>
+            <div class="video-container" style="max-width: 100%; margin: 0 auto; border: 1px solid #000; padding: 10px; background-color: #000;">
+              <video class="comp_video" poster="" id="mainVideo" autoplay controls muted loop style="width: 100%;">
+                <source src="static/videos/main_video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method/Approach Section -->
+  <section class="section is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Method/Approach</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                StageCraft analyzes past rollout successes and failures using a vision-language model to identify distractor objects. It then removes the minimal set of failure-inducing objects via primitive actions before executing the policy.
+              </p>
+              <p>
+                <strong>1. Observe policy behavior:</strong> StageCraft collects rollout episodes of a pretrained VLA policy under different distractor configurations and records their success or failure.
+              </p>
+              <p>
+                <strong>2. Reason about failure sources:</strong> A vision-language model analyzes these rollout examples to identify objects in the scene that are likely responsible for policy failures.
+              </p>
+              <p>
+                <strong>3. Prepare the environment before execution:</strong> The robot removes the minimal set of predicted distractors using primitive pick-and-place actions, after which the VLA policy is executed in the modified environment to improve task success.
+              </p>
+            </div>
+          </div>
+          <!-- Optional: Add an image of your method/pipeline -->
+          <div class="columns is-centered">
+            <img src="static/images/method_image.jpg" alt="Method diagram" width="100%" class="center-image" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Robot Tasks -->
+  <section class="hero section is-small is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Real Robot Tasks</h2>
+            <div class="level-set has-text-justified">
+              <p>
+                We evaluate StageCraft across three real-world robotic manipulation tasks.
+              </p>
+            </div>
+          </div>
+          <!-- Images stacked vertically -->
+          <div class="columns is-centered">
+            <div class="column is-full">
+              <img src="static/images/tasks.png" alt="Tasks" width="110%" class="center-image" style="margin-bottom: 20px;" />
+            </div>
+          </div>
+          <div class="content">
+            <div class="level-set has-text-justified">
+              <ul style="list-style-type: none; padding-left: 0;">
+                <li style="margin-bottom: 10px;">
+                  <strong>Stack Cups:</strong> Stack the left and right cups on top of the center cup.
+                </li>
+                <li style="margin-bottom: 10px;">
+                  <strong>Setup Plate:</strong> Take a plate from the rack and place a piece of bread on the plate.
+                </li>
+                <li style="margin-bottom: 10px;">
+                  <strong>Block in Bowl:</strong> Pick up the block and place it inside the bowl.
+                </li>
+              </ul>
+              <p style="margin-top: 15px;">
+                The underlying policy for performing the tasks is a vision language action model. Our method works irrespective of the model used which we showcase by testing our method for SmolVLA and Pi 0.5.
+                We test robustness to diverse visual distractors and physical obstructions across both seen and unseen object configurations.
+              </p>
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-three-quarters">
+              <img src="static/images/distractor_obects_final.jpg" alt="Distractor Objects" width="70%" class="center-image" />
+            </div>
+          </div>
+          <div class="content">
+            <div class="level-set has-text-justified">
+              <p style="margin-top: 15px;">
+                We used a set of 8 distractor objects as shown in the figure above to conduct our real-world experiments. The gray collector bin is also a distractor as it was not present in the robot's workspace during data collection.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Input Language Instruction Prompt -->
+  <section class="section is-small">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <div class="content">
+            <h2 class="title is-3">Input Language Instruction Prompt</h2>
+          </div>
+          <div class="content has-text-left">
+            <pre style="font-family: 'Roboto Mono', monospace; background-color: #f5f5f5; padding: 20px; border-radius: 5px; overflow-x: auto; font-size: 16px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word;">You are a robot learning policy execution expert who has to gauge the performance of a policy that will be executed in a particular environment with a FRANKA EMIKA Research 3 robot:
+
+You are provided with {n_videos} inital environment state images. Each image consists of "front_camera_RGB, wrist_camera_RGB" frames showing the progression of a policy rollout.
+The images are labeled v1 through v{n_videos}. Additionally, you are provided with the policy rollout results that are either "SUCCESS" or "FAILURE" tags. The image labels and the result tags are as follows:
+
+{video_labels}
+
+The policy was instructed with the following task instruction: {task_instruction} 
+In order to gauge the performance of the policy rollouts, you need to understand the following prerequisites:
+        1. [object] : This is a unique object present in the robot's workspace.
+        2. < object_1, object_2, ... > : This is an environment category that consists of a unique set of [object]s present in the robot's workspace.
+                
+            For example: (i) If in the robot's workspace a [coffee_cup], and a [water_bottle] are visible then the environment category is given as < coffee_cup, water_bottle >
+                        (ii) If in the robot's workspace a [red_cube] is visible then the environment category is given as <red_cube>
+            
+        3. @action(object) :  This is a predefined primitive action that the robot can take to change the environment category of the workspace.
+                              List of primitives available with the robot are: [@remove]
+                                 
+            For example: (i) The primitive action @remove(coffee_cup) will change the environment category from < coffee_cup, water_bottle > to < water_bottle >
+                         (ii) The primitive action @add(coffee_cup) will change the environment category from < coffee_cup, water_bottle > to < coffee_cup, water_bottle, coffee_cup >
+
+Now you have to follow the algorithm below that describes your job as a policy execution expert:
+                                 
+****ALGORITHM****
+1. Identify the [object]s present in the robot's workspace across all the {n_videos} inital environment state-image.
+   Make sure you assign rich semantic descriptions for the [object]s. For example: [blue_water_bottle] and [green_water_bottle] are two different [object]s and should not be generalized as a single [water_bottle] object.
+   Then build the corresponding environment category for each image. NOTE: Multiple images might have the same environment category if they have the same set of [object]s.
+   
+                                 
+2. Identify the unique environment categories and assign success rates to each of them based on the result tags associated with the inital environment state image.
+        For example: If the environment category < coffee_cup, water_bottle > appears 5 times in the inital environment state-image and the result tags for this environment category are
+                     SUCCESS, SUCCESS, FAILURE, SUCCESS, SUCCESS respectively, then the success rate for the environment category will be 4/5 or 0.8
+                                 
+    
+3. Identify the environment categories with high success rates. NOTE: These are our target environment categories.
+
+4. Consider the "new_initial_state_image" provided at the end of the initial environment state image sequence. This is the initial state image of a new robot workspace.
+    
+    Identify the environment category for this "new_initial_state_image" using step 1 and step 2 of the ALGORITHM. NOTE: The environment category for this workspace may be different from all the
+    environment categories previously identified from the {n_videos} initial environment state images, and no performance tag will be available for the "new_initial_state_image".
+    
+5. Now your task is to deduce a sequence of primitive @action to change the environment category of the "new_initial_state_image" into an environment category that has a high success rate.
+    NOTE: Only remove the necessary objects to reach the desired environment category with a high success rate based on the observed empirical performance. 
+    You are only allowed to use primitive @action from the list of available actions as mentioned in the prerequisites.
+                                                                  
+                                 
+Your output must be in the following format:
+
+{
+    "policy execution analysis": {
+        "object_list": [
+            "[object_1]", "[object_2]", "[object_3]", ...
+        ],
+        "unique_environment_categories": [
+            "< object_1, object_4, ... >",
+            "< object_4, object_6, ... >",
+            "< object_9, object_12, ... >",
+            ...
+        ],
+        "success_rates": [
+            "SR1%", "SR2%", "SR3%", ...
+        ],
+        "new_initial_state_image_environment_category": "< object_5, object_4, ... >",
+        "deduced_actions": [
+            "@action1(object1)", "@action2(object2)", "@action3(object3)", ...
+        ],
+        "rationale": "Your reasoning..."
+    }
+}
+
+Field descriptions:
+- "object_list": List of objects present in the workspace across all the inital environment state-images and the "new_initial_state_image".
+- "unique_environment_categories": The list of unique environment categories across all the inital environment state-images.
+- "success_rates": Success rates of all the unique environment categories. The cardinality of this list should be the same as that of unique_environment_categories.
+- "new_initial_state_image_environment_category": The environment category of the "new_initial_state_image".
+- "deduced_actions": Sequence of deduced primitive actions that results in a high success rate environment category.
+- "rationale": A thorough yet succinct explanation of your reasoning for the sequence of deduced actions.
+
+NOTE: Please ensure all the values in the above JSON are strings or lists of strings.
+
+Respond ONLY with a valid JSON object matching the structure above. Do not include any prose, explanation, or markdown formatting outside the JSON block.</pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Real Robot Results -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <h2 class="title is-3">Real Robot Results</h2>
+        
+        <!-- SmolVLA Section -->
+        <div style="margin-top: 40px;">
+          <h3 class="title is-4">SmolVLA</h3>
+          
+          <!-- Stack Cups -->
+          <div style="margin-bottom: 30px;">
+            <h4 class="title is-5">Stack Cups</h4>
+            <div class="video-container">
+              <div class="video-item">
+                <video class="comp_video" poster="" id="smolvla_cups" autoplay controls muted loop>
+                  <source src="static/videos/smolvla_stack_cups.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Setup Plate -->
+          <div style="margin-bottom: 30px;">
+            <h4 class="title is-5">Setup Plate</h4>
+            <div class="video-container">
+              <div class="video-item">
+                <video class="comp_video" poster="" id="smolvla_plate" autoplay controls muted loop>
+                  <source src="static/videos/smolvla_setup_plate.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Block in Bowl -->
+          <div style="margin-bottom: 30px;">
+            <h4 class="title is-5">Block in Bowl</h4>
+            <div class="video-container">
+              <div class="video-item">
+                <video class="comp_video" poster="" id="smolvla_block" autoplay controls muted loop>
+                  <source src="static/videos/smolvla_block_in_bowl.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pi 0.5 Section -->
+        <div style="margin-top: 40px;">
+          <h3 class="title is-4">Pi 0.5</h3>
+          
+          <!-- Stack Cups -->
+          <div style="margin-bottom: 30px;">
+            <h4 class="title is-5">Stack Cups</h4>
+            <div class="video-container">
+              <div class="video-item">
+                <video class="comp_video" poster="" id="pi05_cups" autoplay controls muted loop>
+                  <source src="static/videos/pi05_stack_cups.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Setup Plate -->
+          <div style="margin-bottom: 30px;">
+            <h4 class="title is-5">Setup Plate</h4>
+            <div class="video-container">
+              <div class="video-item">
+                <video class="comp_video" poster="" id="pi05_plate" autoplay controls muted loop>
+                  <source src="static/videos/pi05_setup_plate.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Block in Bowl -->
+          <div style="margin-bottom: 30px;">
+            <h4 class="title is-5">Block in Bowl</h4>
+            <div class="video-container">
+              <div class="video-item">
+                <video class="comp_video" poster="" id="pi05_block" autoplay controls muted loop>
+                  <source src="static/videos/pi05_block_in_bowl.mp4" type="video/mp4">
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                target="_blank">Academic Project Page Template</a> which was adopted from the <a
+                href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+              You are free to borrow the source code of this website, we just ask that you link back to this page in the
+              footer. <br> This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Statcounter tracking code -->
+
+  <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+  <!-- End of Statcounter Code -->
+
+</body>
+
 </html>
+
