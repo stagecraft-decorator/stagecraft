@@ -53,12 +53,20 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models</h1>
+            <h1 class="title is-1 publication-title" style="font-style: italic; font-weight: 600;">StageCraft: Execution Aware Mitigation of Distractor and Obstruction Failures in VLA Models</h1>
             <div class="is-size-5 publication-authors">
               <!-- Anonymous Submission -->
               <span class="author-block">
                 Anonymous Submission
               </span>
+            </div>
+            <div style="margin-top: 20px;">
+              <button onclick="togglePrompt()" class="button is-primary is-medium" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; padding: 12px 30px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.4)';">
+                <span class="icon">
+                  <i class="fas fa-code"></i>
+                </span>
+                <span>View Full Prompt</span>
+              </button>
             </div>
           </div>
         </div>
@@ -120,8 +128,8 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
           <div class="content">
-            <h2 class="title is-3">Method/Approach</h2>
-            <div class="level-set has-text-justified">
+            <h2 class="title is-3">Method</h2>
+            <div class="level-set has-text-left">
               <p>
                 StageCraft analyzes past rollout successes and failures using a vision-language model to identify distractor objects. It then removes the minimal set of failure-inducing objects via primitive actions before executing the policy.
               </p>
@@ -139,6 +147,14 @@
           <!-- Optional: Add an image of your method/pipeline -->
           <div class="columns is-centered">
             <img src="static/images/method_image.jpg" alt="Method diagram" width="100%" class="center-image" />
+          </div>
+          <div style="margin-top: 30px; text-align: center;">
+            <button onclick="togglePrompt()" class="button is-primary is-medium" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border: none; padding: 12px 30px; font-size: 16px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(102, 126, 234, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(102, 126, 234, 0.4)';">
+              <span class="icon">
+                <i class="fas fa-code"></i>
+              </span>
+              <span>View Full Prompt</span>
+            </button>
           </div>
         </div>
       </div>
@@ -201,12 +217,18 @@
   </section>
 
   <!-- Input Language Instruction Prompt -->
-  <section class="section is-small">
+  <section class="section is-small" id="promptSection" style="display: none;">
     <div class="container is-max-desktop">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full">
           <div class="content">
             <h2 class="title is-3">Input Language Instruction Prompt</h2>
+            <button onclick="togglePrompt()" class="button is-light" style="margin-bottom: 15px;">
+              <span class="icon">
+                <i class="fas fa-times"></i>
+              </span>
+              <span>Hide Prompt</span>
+            </button>
           </div>
           <div class="content has-text-left">
             <pre style="font-family: 'Roboto Mono', monospace; background-color: #f5f5f5; padding: 20px; border-radius: 5px; overflow-x: auto; font-size: 16px; line-height: 1.5; white-space: pre-wrap; word-wrap: break-word;">You are a robot learning policy execution expert who has to gauge the performance of a policy that will be executed in a particular environment with a FRANKA EMIKA Research 3 robot:
@@ -309,7 +331,7 @@ Respond ONLY with a valid JSON object matching the structure above. Do not inclu
           
           <!-- Stack Cups -->
           <div style="margin-bottom: 40px;">
-            <h4 class="title is-5" style="text-align: left;">Stack Cups</h4>
+            <h4 class="title is-5" style="text-align: left; font-weight: bold;">Stack Cups</h4>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
               <div style="flex: 1; min-width: 250px; max-width: 400px;">
                 <p style="margin-bottom: 10px;"><strong>Success</strong></p>
@@ -330,11 +352,16 @@ Respond ONLY with a valid JSON object matching the structure above. Do not inclu
                 </video>
               </div>
             </div>
+            <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #667eea; text-align: left;">
+              <p style="margin: 0; line-height: 1.6; color: #333;">
+                The first two videos showcase the VLA policy performing the task in the presence of distractors and obstructors in the scene. The robot is able to perform the task in the presence of the bunny and the mustard bottle present in the scene, while in the case of the Santa toy the robot faces an obstruction and fails the task. These rollouts are fed to StageCraft which removes the obstructor as it is responsible for policy failure.
+              </p>
+            </div>
           </div>
           
           <!-- Setup Plate -->
           <div style="margin-bottom: 40px;">
-            <h4 class="title is-5" style="text-align: left;">Setup Plate</h4>
+            <h4 class="title is-5" style="text-align: left; font-weight: bold;">Setup Plate</h4>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
               <div style="flex: 1; min-width: 250px; max-width: 400px;">
                 <p style="margin-bottom: 10px;"><strong>Success</strong></p>
@@ -355,11 +382,16 @@ Respond ONLY with a valid JSON object matching the structure above. Do not inclu
                 </video>
               </div>
             </div>
+            <div style="margin-top: 20px; padding: 15px; background-color: #f8f9fa; border-left: 4px solid #667eea; text-align: left;">
+              <p style="margin: 0; line-height: 1.6; color: #333;">
+                Similarly, the first two videos showcase the success and failure of the policy for the task of setup plate. StageCraft recognizes the failure through a history of 15 rollouts to judge the effect of these distractors and obstructors in the scene and promptly removes them to improve the chance of success for the policy.
+              </p>
+            </div>
           </div>
           
           <!-- Block in Bowl -->
           <div style="margin-bottom: 40px;">
-            <h4 class="title is-5" style="text-align: left;">Block in Bowl</h4>
+            <h4 class="title is-5" style="text-align: left; font-weight: bold;">Block in Bowl</h4>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
               <div style="flex: 1; min-width: 250px; max-width: 400px;">
                 <p style="margin-bottom: 10px;"><strong>Success</strong></p>
@@ -389,7 +421,7 @@ Respond ONLY with a valid JSON object matching the structure above. Do not inclu
           
           <!-- Stack Cups -->
           <div style="margin-bottom: 40px;">
-            <h4 class="title is-5" style="text-align: left;">Stack Cups</h4>
+            <h4 class="title is-5" style="text-align: left; font-weight: bold;">Stack Cups</h4>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
               <div style="flex: 1; min-width: 250px; max-width: 400px;">
                 <p style="margin-bottom: 10px;"><strong>Success</strong></p>
@@ -414,7 +446,7 @@ Respond ONLY with a valid JSON object matching the structure above. Do not inclu
           
           <!-- Setup Plate -->
           <div style="margin-bottom: 40px;">
-            <h4 class="title is-5" style="text-align: left;">Setup Plate</h4>
+            <h4 class="title is-5" style="text-align: left; font-weight: bold;">Setup Plate</h4>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
               <div style="flex: 1; min-width: 250px; max-width: 400px;">
                 <p style="margin-bottom: 10px;"><strong>Success</strong></p>
@@ -439,7 +471,7 @@ Respond ONLY with a valid JSON object matching the structure above. Do not inclu
           
           <!-- Block in Bowl -->
           <div style="margin-bottom: 40px;">
-            <h4 class="title is-5" style="text-align: left;">Block in Bowl</h4>
+            <h4 class="title is-5" style="text-align: left; font-weight: bold;">Block in Bowl</h4>
             <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
               <div style="flex: 1; min-width: 250px; max-width: 400px;">
                 <p style="margin-bottom: 10px;"><strong>Success</strong></p>
@@ -497,6 +529,21 @@ Respond ONLY with a valid JSON object matching the structure above. Do not inclu
   <!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
 
   <!-- End of Statcounter Code -->
+
+  <script>
+    function togglePrompt() {
+      var promptSection = document.getElementById('promptSection');
+      if (promptSection.style.display === 'none') {
+        promptSection.style.display = 'block';
+        // Smooth scroll to prompt section
+        promptSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        promptSection.style.display = 'none';
+        // Scroll back to top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    }
+  </script>
 
 </body>
 
