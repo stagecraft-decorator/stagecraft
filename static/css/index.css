@@ -2,6 +2,24 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+.custom-black-button {
+  background: #2b2738 !important;
+  color: #fff !important;
+  border: 2px solid #2b2738 !important;
+  border-radius: 999px !important;
+  padding: 6px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.custom-black-button:hover {
+  background: #fff !important;
+  color: #2b2738 !important;
+  border: 2px solid #2b2738 !important;
+  transform: translateY(-2px);
+}
 
 .footer .icon-link {
     font-size: 25px;
