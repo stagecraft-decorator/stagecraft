@@ -78,10 +78,6 @@
               <span>*Equal Contribution</span>
             </div>
           <div style="margin-top: 24px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-            <button onclick="togglePrompt()" class="button is-medium" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
-              <span class="icon"><i class="fas fa-code"></i></span>
-              <span>View Full Prompt</span>
-            </button>
             <a href="https://arxiv.org/abs/2603.20659"
               target="_blank"
               class="button is-small is-rounded custom-black-button">
@@ -104,6 +100,12 @@
             <button onclick="toggleBibtex()" class="button is-small is-rounded custom-black-button" style="border: none;">
               <span class="icon" style="font-size: 14px;"><i class="fas fa-quote-right"></i></span>
               <span>BibTeX</span>
+            </button>
+          </div>
+          <div style="margin-top: 12px; display: flex; justify-content: center;">
+            <button onclick="togglePrompt()" class="button is-medium" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #fff; border: none; padding: 12px 24px; font-size: 15px; font-weight: 600; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)';" onmouseout="this.style.transform='translateY(0)';">
+              <span class="icon"><i class="fas fa-code"></i></span>
+              <span>View Full Prompt</span>
             </button>
           </div>
           </div>
@@ -630,42 +632,6 @@ Respond ONLY with a valid JSON object matching the structure above. Do not inclu
         }, 1500);
       });
     }
-  </script>
-
-  <!-- Confetti -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-  <script>
-    window.addEventListener('load', function () {
-      // Initial burst
-      confetti({
-        particleCount: 120,
-        spread: 80,
-        origin: { y: 0.5 },
-        colors: ['#9945ff', '#ff1493', '#667eea', '#fda085', '#f6d365', '#38ef7d']
-      });
-
-      // Left cannon
-      setTimeout(() => {
-        confetti({
-          particleCount: 60,
-          angle: 60,
-          spread: 55,
-          origin: { x: 0, y: 0.6 },
-          colors: ['#9945ff', '#ff1493', '#fda085']
-        });
-      }, 300);
-
-      // Right cannon
-      setTimeout(() => {
-        confetti({
-          particleCount: 60,
-          angle: 120,
-          spread: 55,
-          origin: { x: 1, y: 0.6 },
-          colors: ['#667eea', '#38ef7d', '#f6d365']
-        });
-      }, 500);
-    });
   </script>
 
 </body>
